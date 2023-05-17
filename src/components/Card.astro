@@ -1,7 +1,14 @@
-<div>
+---
+import Knap from "../components/Knap.astro";
+---
+
+<div class="img_container">
   <img src="../public/img/signature.png" alt="" />
-  <h2 class="cardh2">Signature ring</h2>
+  <h3 class="cardh2">Signature ring</h3>
   <p>Lorem, ipsum dolor sit amet malet muiolsok</p>
+  <div class="knap">
+    <Knap color="white" text="shop" />
+  </div>
 </div>
 <style>
   div {
@@ -17,6 +24,15 @@
   }
   .knap {
     border: 2px solid var(--primarycolor);
-    padding: 0.2rem 2rem;
+  }
+  .img_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    align-self: stretch;
   }
 </style>
