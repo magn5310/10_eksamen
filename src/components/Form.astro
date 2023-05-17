@@ -1,0 +1,172 @@
+---
+import Knap from "./Knap.astro";
+---
+
+---
+
+<section class="kontakt">
+  <div>
+    <h2>Skal vi arbejde sammen?</h2>
+    <p>Jeg er altid klar på at tage en samtale, om du har noget helt konkret i tankerne eller noget mere løst, så kontakt mig endelig!</p>
+
+    <div class="form">
+      <form action="https://formspree.io/f/xlekvbzw" method="POST">
+        <input type="text" name="firstname" required placeholder="Full name*" />
+        <input type="email" name="email" required placeholder="yourmail@gmail.com*" />
+        <input class="all" type="text" name="overskrift" placeholder="Headline*" />
+        <input class="all text" type="text" name="text" placeholder="Text*" />
+
+        <button type="submit"> <Knap color="blue" textx="Send" /></button>
+      </form>
+    </div>
+    <div></div>
+  </div>
+  <div id="kontakt" class="container">
+    <div class="kontakt_other">
+      <!-- <h4>Ring mig op</h4>
+      <p>+45 20 15 21 16</p>
+      <h4>Send en mail</h4>
+      <p>j.elikofer@gmail.com</p> -->
+      <Knap name="Ring mig op" link="tel:+4520152116" />
+      <Knap name="Send en mail" link="mailto: j.elikofer@gmail.com" />
+    </div>
+  </div>
+
+  <style>
+    #kontakt {
+      scroll-margin-top: 400px;
+    }
+
+    .kontakt {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .kontakt_other {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    p {
+      max-width: 60ch;
+    }
+    h4 {
+      color: var(--secondarycolor) !important;
+    }
+    input {
+      color: var(--secondarycolor);
+      font-weight: 100;
+      font-size: 1rem;
+      background-color: none;
+      border: 0.1px solid var(--primarycolor);
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      color: var(--black);
+    }
+
+    input::placeholder {
+      color: var(--black);
+      opacity: 0.7;
+    }
+    .textarea[contenteditable]:empty::before {
+      content: "Tekst*";
+      color: black;
+      opacity: 0.7;
+    }
+
+    form {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 5fr;
+      gap: 0.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .all {
+      grid-column: span 3;
+    }
+    .tekst {
+      text-align: start;
+    }
+
+    button {
+      color: transparent;
+      background-color: transparent;
+      border-color: transparent;
+      padding: 0;
+      display: flex;
+    }
+    input {
+      border: 1px solid var(--primarycolor);
+      background-color: var(--secondarycolor);
+    }
+
+    @media (max-width: 768px) {
+      section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+        width: 100%;
+      }
+
+      button {
+        background-color: var(--primarycolor);
+        border: 1px solid var(--secondarycolor);
+        color: var(--secondarycolor);
+        font-family: aviano-sans, sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        font-style: normal;
+        height: 100%;
+        width: 100%;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+      }
+      .kontakt {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0;
+        display: block;
+      }
+      .container {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      .kontakt_other {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+        justify-content: stretch;
+      }
+    }
+  </style>
+
+  <script></script>
+</section>
