@@ -21,6 +21,13 @@ import Card from "./Card.astro";
 
   .inner {
     display: flex;
+  }
+
+  .outer {
+    width: 100%;
+    overflow: hidden;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
   }
 </style>
