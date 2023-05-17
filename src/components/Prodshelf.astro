@@ -6,6 +6,9 @@ import Card from "./Card.astro";
   <div class="inner">
     <h2>The rings we have in stock.</h2>
     <Card />
+    <Card />
+    <Card />
+    <Card />
   </div>
 </div>
 <style>
@@ -14,5 +17,10 @@ import Card from "./Card.astro";
   }
   h2 {
     max-width: 8ch;
+  }
+
+  .inner {
+    display: flex;
+    overflow-x: scroll;
   }
 </style>
