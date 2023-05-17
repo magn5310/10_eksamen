@@ -8,17 +8,27 @@
   </div>
 
   <div class="container">
-    <div class="item active">
+    <div class="item active first">
       <h3>Signature</h3>
+      <div class="img"></div>
     </div>
 
-    <div class="item"></div>
-
-    <div class="item"></div>
-
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+    <div class="item second">
+      <h3>Signature</h3>
+      <div class="img"></div>
+    </div>
+    <div class="item third">
+      <h3>Signature</h3>
+      <div class="img"></div>
+    </div>
+    <div class="item fourth">
+      <h3>Signature</h3>
+      <div class="img"></div>
+    </div>
+    <div class="item fifth">
+      <h3>Signature</h3>
+      <div class="img"></div>
+    </div>
   </div>
 </section>
 <style>
@@ -42,12 +52,116 @@
     margin-top: 1rem;
   }
   .item {
+    display: flex;
+
     border: 1px solid var(--black);
-    min-width: 100px;
+    width: 150px;
     position: relative;
+    overflow: hidden;
+    transition: 1s ease;
   }
 
   .item.active {
+    transition: 1s ease;
     width: 100%;
   }
+
+  .item h3 {
+    position: absolute;
+    top: 4rem;
+    rotate: 90deg;
+    color: var(--black);
+    font-weight: 100;
+  }
+  .item.active h3 {
+    margin-left: 1rem;
+
+    color: var(--secondarycolor);
+    left: -1rem;
+  }
+
+  .first .img {
+    background-image: url(../../public/img/ring1.png);
+  }
+  .second .img {
+    background-image: url(../../public/img/ring1.png);
+  }
+  .third .img {
+    background-image: url(../../public/img/ring1.png);
+  }
+  .fourth .img {
+    background-image: url(../../public/img/ring1.png);
+  }
+  .fifth .img {
+    background-image: url(../../public/img/ring1.png);
+  }
+
+  .item .img {
+    height: 500px;
+    width: 1800px;
+
+    background-position: center;
+    opacity: 0%;
+    transition: 0.5s ease;
+
+    z-index: -1;
+    transition: 0.2s ease;
+  }
+
+  .item:hover h3 {
+    color: var(--secondarycolor);
+  }
+  .item:hover .img {
+    opacity: 100%;
+  }
+
+  .item.active .img {
+    transition: 2s ease;
+    opacity: 100%;
+  }
 </style>
+
+<script>
+  const item = document.querySelector(".item");
+  const first = document.querySelector(".first");
+  const second = document.querySelector(".second");
+  const third = document.querySelector(".third");
+  const fourth = document.querySelector(".fourth");
+  const fifth = document.querySelector(".fifth");
+
+  first.addEventListener("click", () => {
+    first.classList.add("active");
+    second.classList.remove("active");
+    third.classList.remove("active");
+    fourth.classList.remove("active");
+    fifth.classList.remove("active");
+  });
+  second.addEventListener("click", () => {
+    first.classList.remove("active");
+    second.classList.add("active");
+    third.classList.remove("active");
+    fourth.classList.remove("active");
+    fifth.classList.remove("active");
+  });
+  third.addEventListener("click", () => {
+    first.classList.remove("active");
+    second.classList.remove("active");
+    third.classList.add("active");
+    fourth.classList.remove("active");
+    fifth.classList.remove("active");
+  });
+  fourth.addEventListener("click", () => {
+    first.classList.remove("active");
+    second.classList.remove("active");
+    third.classList.remove("active");
+    fourth.classList.add("active");
+    fifth.classList.remove("active");
+  });
+  fifth.addEventListener("click", () => {
+    first.classList.remove("active");
+    second.classList.remove("active");
+    third.classList.remove("active");
+    fourth.classList.remove("active");
+    fifth.classList.add("active");
+  });
+</script>
