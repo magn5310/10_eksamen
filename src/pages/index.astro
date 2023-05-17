@@ -23,6 +23,16 @@ import "../styles/style.css";
   <body>
     <Header />
     <main>
+      <h1>
+        <span>C</span>
+        <span>E</span>
+        <span>H</span>
+        <span>O</span>
+        <span>F</span>
+        <span>S</span>
+        <span>K</span>
+        <span>I</span>
+      </h1>
       <Foldshelf />
       <Grammen />
       <Order />
@@ -30,3 +40,56 @@ import "../styles/style.css";
     <Footer />
   </body>
 </html>
+
+<style>
+  h1 {
+    overflow: hidden;
+    margin-left: 1rem;
+    position: relative;
+    line-height: 8rem;
+  }
+
+  span {
+    position: relative;
+    opacity: 0;
+    float: left;
+
+    animation: letterup 0.75s forwards;
+  }
+
+  span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  span:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+
+  @keyframes letterup {
+    0% {
+      bottom: -8rem;
+      transform: rotate(45deg);
+      opacity: 1;
+    }
+
+    100% {
+      bottom: 0;
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+</style>
