@@ -13,17 +13,21 @@ html {
 
 h1 {
   font-family: "Perandory";
-  font-size: 5rem;
+  font-size: 8rem;
+  font-weight: 100;
+  color: var(--primarycolor);
 }
 h2 {
   font-family: "Perandory";
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: 100;
+  color: var(--primarycolor);
 }
 h3 {
   font-family: "Perandory";
   font-size: 2rem;
 }
-h2 {
+h4 {
   font-family: "Perandory";
   font-size: 1rem;
 }
@@ -31,6 +35,10 @@ h2 {
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+}
+
+body {
+  background-color: var(--secondarycolor);
 }
 
 /* <link rel="preconnect" href="https://fonts.googleapis.com">
