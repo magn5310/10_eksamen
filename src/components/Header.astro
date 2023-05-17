@@ -1,19 +1,34 @@
 <header>
   <nav>
-    <h3>Cehofski</h3>
+    <a href="/">
+      <h3>Cehofski</h3>
+    </a>
     <div>
-      <h4>shop</h4>
-      <h4>about</h4>
+      <a href="/shop">
+        <h4>shop</h4>
+      </a>
+      <a href="/about">
+        <h4>about</h4>
+      </a>
     </div>
   </nav>
 </header>
 <style>
   nav {
-    background-color: brown;
+    background-color: var(--secondarycolor);
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: var(--primarycolor);
   }
   div {
     display: flex;
+  }
+  div > * {
+    margin: 1rem;
   }
 </style>
