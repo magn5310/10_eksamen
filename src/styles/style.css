@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 html {
   --primarycolor: #3834ff;
   --secondarycolor: #faf7f1;
