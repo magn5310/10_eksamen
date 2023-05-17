@@ -11,12 +11,24 @@ import Knap from "./Knap.astro";
 
     <div class="form">
       <form action="https://formspree.io/f/xlekvbzw" method="POST">
-        <input type="text" name="firstname" required placeholder="Full name*" />
-        <input type="email" name="email" required placeholder="yourmail@gmail.com*" />
+        <input class="two" type="text" name="firstname" required placeholder="Full name*" />
+        <input class="two" type="email" name="email" required placeholder="yourmail@gmail.com*" />
+        <select name="type" id="type">
+          <option value="" disabled selected>Ring</option>
+          <option value="Signature">Signature</option>
+          <option value="Custom">Custom</option>
+          <option value="Ponyo">Ponyo</option>
+        </select>
+        <select name="size" id="size">
+          <option value="" disabled selected>Size</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+        </select>
         <input class="all" type="text" name="overskrift" placeholder="Headline*" />
         <input class="all text" type="text" name="text" placeholder="Text*" />
 
-        <button type="submit"> <Knap color="blue" textx="Send" /></button>
+        <button type="submit"> <Knap color="blue" text="Send" /></button>
       </form>
     </div>
     <div></div>
@@ -69,6 +81,16 @@ import Knap from "./Knap.astro";
       color: var(--black);
     }
 
+    select {
+      color: var(--secondarycolor);
+      font-weight: 100;
+      font-size: 1rem;
+      background-color: var(--secondarycolor);
+      border: 1px solid var(--primarycolor);
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      color: var(--black);
+    }
+
     input::placeholder {
       color: var(--black);
       opacity: 0.7;
@@ -83,14 +105,17 @@ import Knap from "./Knap.astro";
       margin-top: 1rem;
       margin-bottom: 1rem;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 5fr;
       gap: 0.5rem;
       overflow: hidden;
       position: relative;
     }
     .all {
-      grid-column: span 3;
+      grid-column: span 4;
+    }
+
+    .two {
     }
     .tekst {
       text-align: start;
