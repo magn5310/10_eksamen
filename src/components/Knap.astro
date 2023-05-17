@@ -1,0 +1,40 @@
+---
+const { text, color, link } = Astro.props;
+---
+
+<a class={color} href={link}> {text}</a>
+
+<style>
+  a {
+    padding: 0.7rem 2.1rem 0.7rem 2.1rem;
+    font-family: "Perandory";
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .blue {
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+  }
+
+  .blue:hover {
+    background-color: var(--secondarycolor);
+    border: 1px solid var(--primarycolor);
+    color: var(--primarycolor);
+    transition: 0.2s ease;
+  }
+
+  .white {
+    background-color: var(--secondarycolor);
+    color: var(--primarycolor);
+  }
+
+  .white:hover {
+    background-color: var(--primarycolor);
+
+    color: var(--secondarycolor);
+    transition: 0.2s ease;
+  }
+</style>
