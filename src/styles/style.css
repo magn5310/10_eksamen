@@ -1,0 +1,38 @@
+html {
+  --primarycolor: #3834ff;
+  --secondarycolor: #fffefa;
+  --black: #191919;
+}
+
+@font-face {
+  font-family: "Perandory";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../public/fonts/PerandorySemiCondensed.woff);
+}
+
+h1 {
+  font-family: "Perandory";
+  font-size: 5rem;
+}
+h2 {
+  font-family: "Perandory";
+  font-size: 3rem;
+}
+h3 {
+  font-family: "Perandory";
+  font-size: 2rem;
+}
+h2 {
+  font-family: "Perandory";
+  font-size: 1rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
