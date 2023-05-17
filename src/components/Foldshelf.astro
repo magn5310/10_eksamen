@@ -1,4 +1,5 @@
 ---
+import Knap from "./Knap.astro";
 ---
 
 <section>
@@ -10,28 +11,58 @@
   <div class="container">
     <div class="item active first">
       <h3>Signature</h3>
+      <div class="knap">
+        <Knap color="white" text="shop" />
+      </div>
+
       <div class="img"></div>
     </div>
 
     <div class="item second">
       <h3>Signature</h3>
+      <div class="knap">
+        <Knap color="white" text="shop" />
+      </div>
       <div class="img"></div>
     </div>
     <div class="item third">
       <h3>Signature</h3>
+      <div class="knap">
+        <Knap color="white" text="shop" />
+      </div>
       <div class="img"></div>
     </div>
     <div class="item fourth">
       <h3>Signature</h3>
+      <div class="knap">
+        <Knap color="white" text="shop" />
+      </div>
       <div class="img"></div>
     </div>
     <div class="item fifth">
       <h3>Signature</h3>
+      <div class="knap">
+        <Knap color="white" text="shop" />
+      </div>
       <div class="img"></div>
     </div>
   </div>
 </section>
 <style>
+  .knap {
+    opacity: 0%;
+    position: absolute;
+    bottom: 2rem;
+    right: 1.5rem;
+    transition: 0.5s ease;
+  }
+
+  .active .knap {
+    opacity: 100%;
+    bottom: 2rem;
+    right: 1.5rem;
+    transition: 1s ease;
+  }
   .text {
     margin-left: 1rem;
   }
@@ -50,20 +81,24 @@
     display: flex;
     height: 500px;
     margin-top: 1rem;
+    margin-left: 1rem;
   }
   .item {
     display: flex;
-
+    justify-content: center;
     border: 1px solid var(--black);
     width: 150px;
     position: relative;
     overflow: hidden;
     transition: 1s ease;
+    cursor: pointer;
   }
 
   .item.active {
     transition: 1s ease;
     width: 100%;
+    justify-content: left;
+    cursor: auto;
   }
 
   .item h3 {
@@ -72,12 +107,10 @@
     rotate: 90deg;
     color: var(--black);
     font-weight: 100;
+    margin-left: -1rem;
   }
   .item.active h3 {
-    margin-left: 1rem;
-
     color: var(--secondarycolor);
-    left: -1rem;
   }
 
   .first .img {
