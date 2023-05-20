@@ -10,18 +10,37 @@
     </p>
   </div>
   <div class="gallery">
-    <div class="img">
-      <img src="" alt="" />
-    </div>
-    <div class="img">
-      <img src="" alt="" />
-    </div>
-    <div class="img">
-      <img src="" alt="" />
-    </div>
-    <div class="img">
-      <img src="" alt="" />
-    </div>
+    <a href="https://www.instagram.com/p/CoUGNLxt9Mq/" target="_blank">
+      <div class="img">
+        <div class="info">
+          <p>the most stunning Silja wearing Cehofski pieces 🤍 ...</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/p/CounEmlNeHd/" target="_blank">
+      <div class="img">
+        <div class="info">
+          <h3>February 6th</h3>
+          <p>Cehofski pieces seen on @siljaflor...</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/p/Crqh2PtNKjS/" target="_blank">
+      <div class="img">
+        <div class="info">
+          <h3>February 6th</h3>
+          <p>it’s always a blessing to accessorise my grandmother, Margit Cehofski ♡ ...</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/p/CrdVjG3N2cG/" target="_blank">
+      <div class="img">
+        <div class="info">
+          <h3>February 6th</h3>
+          <p>amazing @marcia_coleman_bulowhube seen in cehofski rings for @latestmagazine ♡...</p>
+        </div>
+      </div>
+    </a>
 
     <style>
       section {
@@ -50,23 +69,78 @@
       .gallery {
         display: flex;
         flex-wrap: wrap;
-        height: 400px;
+
         margin-left: 1rem;
         margin-right: 1rem;
+        gap: 0.5rem;
       }
 
       .img {
-        flex: 4;
+        flex: 5;
+        overflow: hidden;
+        min-height: 400px;
+        max-height: 500px;
+        min-width: 300px;
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        color: var(--primarycolor);
+      }
+      a {
+        flex: 5;
+        overflow: hidden;
+        min-height: 400px;
+        max-height: 500px;
+        min-width: 300px;
+      }
+
+      .info {
+        background-color: var(--secondarycolor);
+
+        padding: 1rem;
+        position: relative;
+        transform-origin: top;
+        bottom: -10rem;
+        transition: 0.3s ease;
+      }
+
+      .img:hover .info {
+        bottom: 0rem;
+        transition: 0.3s ease;
+      }
+      h3 {
+        margin-bottom: -0.5rem;
+      }
+
+      .img p {
+        color: var(--primarycolor);
+      }
+
+      .date {
+        font-size: 0.7rem;
       }
       img {
-        background-color: aliceblue;
         height: 100%;
-        min-height: 300px;
-        min-width: 300px;
+      }
+
+      a:nth-child(1) .img {
+        background-image: url(../../img/instagram5.png);
+      }
+      a:nth-child(2) .img {
+        background-image: url(../../img/instagram3.png);
+      }
+      a:nth-child(3) .img {
+        background-image: url(../../img/instagram4.png);
+      }
+      a:nth-child(4) .img {
+        background-image: url(../../img/instagram2.png);
       }
 
       a {
         text-decoration: none;
+        border: transparent;
         color: var(--primarycolor);
       }
     </style>
