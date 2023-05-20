@@ -1,74 +1,43 @@
 ---
 ---
 
-<div class="container" data-0="transform:translatex(0%);" data-1000="transform:translatex(-400%);">
-  <section>
-    <div class="content">
-      <h1>Cehofski</h1>
-      <p>
-        At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects
-        their personal style and story.
-      </p>
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <h1>Cehofski</h1>
-      <p>
-        At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects
-        their personal style and story.
-      </p>
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <h1>Cehofski</h1>
-      <p>
-        At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects
-        their personal style and story.
-      </p>
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <h1>Cehofski</h1>
-      <p>
-        At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects
-        their personal style and story.
-      </p>
-    </div>
-  </section>
-  <section>
-    <div class="content">
-      <h1>Cehofski</h1>
-      <p>
-        At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects
-        their personal style and story.
-      </p>
-    </div>
+<div class="container">
+  <section id="scroll">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac leo nulla. Donec volutpat consequat elit ut tincidunt. Proin id purus sed nulla lacinia eleifend sed porttitor neque.
+    Vestibulum volutpat porta ex. Aenean accumsan metus eu euismod semper. Phasellus viverra tortor eget enim ultrices, quis dignissim lectus posuere. Nullam turpis nisl, fringilla gravida interdum
+    nec, semper et tellus. Etiam vitae rutrum ligula. Nulla lobortis massa odio, id tempor leo dictum sit amet. Nulla ut porta orci. Maecenas pulvinar est ac est accumsan, non consequat augue
+    lobortis. Morbi semper sollicitudin eros, sit amet lacinia nulla varius a. Nam dignissim faucibus risus, eleifend tincidunt dolor scelerisque a. Quisque tempus, quam efficitur feugiat laoreet,
+    sapien eros aliquam erat, auctor feugiat lacus ipsum id nisl. In nisi urna, laoreet eget pulvinar dignissim, maximus laoreet augue. Vivamus euismod mauris nec felis posuere, eu maximus ante
+    volutpat. Integer porttitor urna quis vehicula feugiat. Integer justo nibh, rutrum pulvinar massa quis, molestie pretium ipsum.
   </section>
 </div>
 
 <style>
   .container {
-    display: flex;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    width: 100vw;
+    height: 500vh;
+    overflow-x: hidden;
     background-color: var(--secondarycolor);
   }
 
   .container section {
-    min-width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 500vw;
+    position: fixed;
   }
 </style>
 
-<script type="text/javascript" src=".AbortController../../public/js/skrollr.js"></script>
-<script type="text/javascript">
-  var s = skrollr.init();
+<script>
+  document.onscroll = () => {
+    // Justér for forskellen mellem vinduets højde og bredde
+    // Beregn, hvor meget siden er blevet rullet vertikalt i procent
+    let percentScrolled = window.pageYOffset / window.innerHeight;
+
+    // Beregn, hvor meget indholdet skal rulles vandret baseret på den vertikale rulning
+    // Gange procentScrolled med vinduets bredde for at få den nødvendige vandrette rullemængde
+    let toScroll = percentScrolled * window.innerWidth;
+
+    // Rul indholdet vandret ved at ændre CSS-egenskaben 'left' for elementet med id 'scroll'
+    // Sæt 'left' til en negativ værdi af toScroll pixels for at opnå den vandrette rulleeffekt
+    document.getElementById("scroll").style.left = "-" + toScroll + "px";
+  };
 </script>
