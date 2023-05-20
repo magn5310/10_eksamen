@@ -3,16 +3,113 @@
 
 <div class="container">
   <section id="scroll">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac leo nulla. Donec volutpat consequat elit ut tincidunt. Proin id purus sed nulla lacinia eleifend sed porttitor neque.
-    Vestibulum volutpat porta ex. Aenean accumsan metus eu euismod semper. Phasellus viverra tortor eget enim ultrices, quis dignissim lectus posuere. Nullam turpis nisl, fringilla gravida interdum
-    nec, semper et tellus. Etiam vitae rutrum ligula. Nulla lobortis massa odio, id tempor leo dictum sit amet. Nulla ut porta orci. Maecenas pulvinar est ac est accumsan, non consequat augue
-    lobortis. Morbi semper sollicitudin eros, sit amet lacinia nulla varius a. Nam dignissim faucibus risus, eleifend tincidunt dolor scelerisque a. Quisque tempus, quam efficitur feugiat laoreet,
-    sapien eros aliquam erat, auctor feugiat lacus ipsum id nisl. In nisi urna, laoreet eget pulvinar dignissim, maximus laoreet augue. Vivamus euismod mauris nec felis posuere, eu maximus ante
-    volutpat. Integer porttitor urna quis vehicula feugiat. Integer justo nibh, rutrum pulvinar massa quis, molestie pretium ipsum.
+    <div class="content">
+      <div>
+        <h1>ABOUT</h1>
+        <p>
+          At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects
+          their personal style and story.
+        </p>
+      </div>
+    </div>
+    <div class="img_container">
+      <img src="../../img/ring1.jpg" alt="" />
+    </div>
+    <div class="grid_1_1_1_1">
+      <div class="img_container">
+        <img src="../../img/ring12.png" alt="" />
+      </div>
+      <div class="img_container">
+        <img src="../../img/ring9.png" alt="" />
+      </div>
+      <div class="img_container">
+        <img src="../../img/ring7.png" alt="" />
+      </div>
+      <div class="img_container">
+        <img src="../../img/signatur_ring.png" alt="" />
+      </div>
+    </div>
+
+    <div class="content louise">
+      <h2>Louise Cehofski</h2>
+      <div class="grid_1_1_1_1">
+        <div class="img_container grid1">
+          <img src="../../img/louise.png" alt="" />
+        </div>
+        <p>
+          My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and creating a
+          universe of jewlery artwear.
+        </p>
+        <div class="img_container grid2">
+          <img src="../../img/louise2.png" alt="" />
+        </div>
+      </div>
+    </div>
   </section>
+</div>
+<div id="scrolling">
+  <div id="scrollbar"></div>
 </div>
 
 <style>
+  body::-webkit-scrollbar {
+    height: 0rem;
+    width: 0rem;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: none;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: none;
+  }
+
+  .content {
+    margin-left: 1rem;
+    display: flex;
+    overflow: hidden;
+  }
+  .louise {
+    flex-direction: column;
+  }
+
+  .img_container {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .grid_1_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    height: 100%;
+  }
+  .grid_1_1_1_1 .img_container {
+    height: 100%;
+  }
+
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  .grid1 {
+    grid-column: span1;
+  }
+  .img_container img {
+    box-sizing: border-box;
+
+    max-height: 100%;
+  }
+
+  .content p {
+    max-width: 30ch;
+  }
   .container {
     width: 100vw;
     height: 500vh;
@@ -22,7 +119,33 @@
 
   .container section {
     width: 500vw;
+    margin-top: 20px;
     position: fixed;
+  }
+  #scroll {
+    display: flex;
+    gap: 1rem;
+    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  #scrolling {
+    position: fixed;
+    bottom: 0.5rem;
+    width: 100vw;
+    height: 8px;
+  }
+  #scrollbar {
+    position: relative;
+    transform-origin: right;
+    margin-left: 0.5rem;
+    bottom: 0.5rem;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--primarycolor);
+    z-index: 9999;
   }
 </style>
 
@@ -31,13 +154,20 @@
     // Justér for forskellen mellem vinduets højde og bredde
     // Beregn, hvor meget siden er blevet rullet vertikalt i procent
     let percentScrolled = window.pageYOffset / window.innerHeight;
-
+    console.log("percent scrolled" + percentScrolled);
     // Beregn, hvor meget indholdet skal rulles vandret baseret på den vertikale rulning
     // Gange procentScrolled med vinduets bredde for at få den nødvendige vandrette rullemængde
     let toScroll = percentScrolled * window.innerWidth;
-
+    console.log(toScroll);
     // Rul indholdet vandret ved at ændre CSS-egenskaben 'left' for elementet med id 'scroll'
     // Sæt 'left' til en negativ værdi af toScroll pixels for at opnå den vandrette rulleeffekt
     document.getElementById("scroll").style.left = "-" + toScroll + "px";
+
+    // Opdater den lodrette scrollbjælkes position baseret på den horisontale rullefunktion
+    let scrollbar = document.getElementById("scrollbar");
+    let scrollcontainer = document.getElementById("scrolling");
+    let scrollbarrelative = percentScrolled * scrollcontainer.offsetWidth;
+
+    document.getElementById("scrollbar").style.left = "+" + scrollbarrelative + "px";
   };
 </script>
