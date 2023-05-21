@@ -1,13 +1,14 @@
 ---
 import Knap from "../components/Knap.astro";
+const { name, info, img1, img2, img3, img4, price, type, id, materials, sten } = Astro.props;
 ---
 
 <div class="img_container">
-  <img src="../public/img/signature.png" alt="" />
-  <h3 class="cardh2">Signature ring</h3>
-  <p>Lorem, ipsum dolor sit amet malet muiolsok</p>
+  <img src={"../public/img/" + img1} alt="" />
+  <h3 class="cardh2">{name}</h3>
+  <p>{info}</p>
   <div class="knap">
-    <Knap color="white" text="shop" />
+    <Knap color="blue" text="shop" />
   </div>
 </div>
 <style>
@@ -17,25 +18,26 @@ import Knap from "../components/Knap.astro";
   a {
     text-decoration: none;
   }
-  .knap {
-    border: 2px solid var(--primarycolor);
-    padding: 0.6rem 0rem;
-  }
+
   .img_container {
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 600px;
   }
-  .img_container h3,
+  h3 {
+    margin-top: 0.5rem;
+  }
   p {
-    margin: 0.5rem;
+    margin-bottom: 2rem;
   }
   img {
     width: 70%;
     margin-inline: auto;
     object-fit: cover;
     align-self: stretch;
+    max-height: 500px;
   }
 </style>
