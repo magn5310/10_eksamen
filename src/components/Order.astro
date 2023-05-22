@@ -42,9 +42,23 @@
     padding-left: 0.3rem;
   }
   .overskrift p {
-    color: var(--primarycolor);
+    color: var(--black);
   }
   a {
     color: var(--primarycolor);
+  }
+  p {
+    color: var(--black);
+  }
+  @media (max-width: 800px) {
+    .info {
+      display: block;
+    }
+    .info > * {
+      margin-bottom: 2rem;
+    }
+    section > * {
+      margin-block: 2rem;
+    }
   }
 </style>
