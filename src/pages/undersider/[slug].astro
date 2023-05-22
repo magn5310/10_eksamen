@@ -1,5 +1,6 @@
 ---
 import Footer from "../../components/Footer.astro";
+import Form from "../../components/Form.astro";
 import Header from "../../components/Header.astro";
 import Knap from "../../components/Knap.astro";
 import "../../styles/style.css";
@@ -145,8 +146,16 @@ const { item } = Astro.props;
               )
             }
           </div>
-          <Knap color="blue" text="shop" />
+          <div class="shop">
+            <Knap color="blue" text="shop" />
+            <a href="#form">
+              <p class="custom">Or get your own custom piece</p>
+            </a>
+          </div>
         </div>
+      </section>
+      <section id="form">
+        <Form />
       </section>
     </main>
     <Footer />
@@ -198,6 +207,9 @@ const { item } = Astro.props;
     height: 700px;
   }
 
+  #form {
+    padding-top: 10rem;
+  }
   .header {
     overflow: hidden;
     height: 700px;
@@ -304,5 +316,18 @@ const { item } = Astro.props;
     grid-column: 2/3;
     position: sticky;
     top: 80px;
+  }
+
+  .custom {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .custom:hover {
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: none;
   }
 </style>
