@@ -9,7 +9,7 @@
       <a href="/shop">
         <h3>Shop</h3>
       </a>
-      <a href="/shop"> <p class="white">Signature rings</p></a>
+      <a href="/shop"> <p>Signature rings</p></a>
 
       <a href="/shop"> <p>Custom rings</p></a>
 
@@ -45,14 +45,12 @@
     display: flex;
     justify-content: space-between;
     background-color: var(--primarycolor);
-
-    flex-wrap: wrap;
+    padding-block: 6.5rem;
   }
   .sektion {
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
     margin-inline: 6rem;
-    margin: auto;
   }
 
   a {
@@ -62,16 +60,34 @@
   a p:hover {
     border-bottom: 1px solid white;
   }
-  .logo {
-    margin: auto;
+  .logo h2 {
+    color: silver;
+    margin-inline: 3rem;
   }
   a > *,
   h3,
   p {
     color: white;
-    /* padding-block: 0.3rem; */
+    padding-block: 0.3rem;
+  }
+  .sektion p {
+    color: white;
   }
   h3 {
     font-weight: 100;
+  }
+  @media (max-width: 800px) {
+    footer {
+      flex-wrap: wrap;
+      padding-block: 2rem;
+    }
+    .sektion {
+      gap: 1rem;
+      margin: auto;
+    }
+    .logo {
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
   }
 </style>
