@@ -5,15 +5,20 @@ const { name, info, img1, img2, img3, img4, price, type, id, materials, sten } =
 
 <div class="img_container">
   <img src={"../public/img/" + img1} alt="" />
-  <h3 class="cardh2">{name}</h3>
-  <p>{info}</p>
-  <div class="knap">
-    <Knap color="blue" text="shop" link={id} />
+  <div class="layout">
+    <div>
+      <h3 class="cardh2">{name}</h3>
+      <p>{info}</p>
+    </div>
+    <div class="knap">
+      <Knap color="blue" text="shop" link={id} />
+    </div>
   </div>
 </div>
 <style>
   .cardh2 {
     color: var(--black);
+    margin-top: 1rem;
   }
   a {
     text-decoration: none;
@@ -28,16 +33,27 @@ const { name, info, img1, img2, img3, img4, price, type, id, materials, sten } =
     min-height: 600px;
   }
   h3 {
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
   }
   p {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
   img {
-    width: 70%;
+    width: 95%;
     margin-inline: auto;
     object-fit: cover;
     align-self: stretch;
     max-height: 500px;
+  }
+  .layout {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+  }
+  .knap {
+    margin-block: 2rem;
+  }
+  p {
+    margin-top: -0.5rem;
   }
 </style>
