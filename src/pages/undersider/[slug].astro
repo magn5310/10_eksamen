@@ -98,6 +98,15 @@ const { item } = Astro.props;
           <span>
             {item.name.slice(13, 14)}
           </span>
+          <span>
+            {item.name.slice(14, 15)}
+          </span>
+          <span>
+            {item.name.slice(15, 16)}
+          </span>
+          <span>
+            {item.name.slice(16, 17)}
+          </span>
         </h1>
       </div>
       <section class="content">
@@ -242,6 +251,9 @@ const { item } = Astro.props;
     float: left;
     transform: rotate(90deg);
     animation: letterup 0.75s forwards;
+
+    min-width: 20px;
+    min-height: 20px;
   }
 
   span:nth-child(2) {
@@ -282,6 +294,15 @@ const { item } = Astro.props;
   }
   span:nth-child(14) {
     animation-delay: 0.65s;
+  }
+  span:nth-child(15) {
+    animation-delay: 0.7s;
+  }
+  span:nth-child(16) {
+    animation-delay: 0.75s;
+  }
+  span:nth-child(17) {
+    animation-delay: 0.8s;
   }
 
   @keyframes letterup {
