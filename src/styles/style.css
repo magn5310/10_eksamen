@@ -50,7 +50,7 @@ h4 {
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: var(--black) !important;
+  color: var(--black);
 }
 
 body {
