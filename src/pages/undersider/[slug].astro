@@ -101,12 +101,13 @@ const { item } = Astro.props;
       </div>
       <section class="content">
         <div class="img_container">
-          <img src={"../../img/" + item.img2 + ".webp"} alt={item.name + " " + item.type} />
-          <img src={"../../img/" + item.img3 + ".webp"} alt={item.name + " " + item.type} />
-          <img src={"../../img/" + item.img4 + ".webp"} alt={item.name + " " + item.type} />
+          {item.img2 && <img src={"../../img/" + item.img2 + ".webp"} alt={item.name + " " + item.type} />}
+
+          {item.img3 && <img src={"../../img/" + item.img3 + ".webp"} alt={item.name + " " + item.type} />}
+          {item.img4 && <img src={"../../img/" + item.img4 + ".webp"} alt={item.name + " " + item.type} />}
         </div>
         <div class="info">
-          <div>
+          <div class="indhold">
             <div class="top">
               <h4>{item.type}</h4>
             </div>
@@ -118,21 +119,33 @@ const { item } = Astro.props;
               <p>Size</p>
               <p>{item.size}</p>
             </div>
-            <div class="text">
-              <p>Materials</p>
-              <p>{item.materiale}</p>
-            </div>
-            <div class="text">
-              <p>Stone</p>
-              <p>{item.sten}</p>
-            </div>
-            <div class="text last">
-              <p>Description</p>
-              <p>{item.text}</p>
-            </div>
 
-            <Knap color="blue" text="shop" />
+            {
+              item.materiale && (
+                <div class="text">
+                  <p>Materials</p>
+                  <p>{item.materiale}</p>
+                </div>
+              )
+            }
+            {
+              item.sten && (
+                <div class="text">
+                  <p>Stone</p>
+                  <p>{item.sten}</p>
+                </div>
+              )
+            }
+            {
+              item.text && (
+                <div class="text">
+                  <p>Description</p>
+                  <p>{item.text}</p>
+                </div>
+              )
+            }
           </div>
+          <Knap color="blue" text="shop" />
         </div>
       </section>
     </main>
@@ -149,8 +162,8 @@ const { item } = Astro.props;
     width: 100%;
     margin-top: 2rem;
   }
-  .last {
-    margin-bottom: 2rem;
+  .indhold {
+    padding-bottom: 2rem;
   }
   .text {
     border-bottom: 1px solid var(--black);
