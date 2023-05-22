@@ -56,6 +56,14 @@ p {
 body {
   background-color: var(--secondarycolor);
 }
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+}
 
 /* <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
