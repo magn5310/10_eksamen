@@ -1,8 +1,10 @@
 ---
+import Foldshelf from "../../components/Foldshelf.astro";
 import Footer from "../../components/Footer.astro";
 import Form from "../../components/Form.astro";
 import Header from "../../components/Header.astro";
 import Knap from "../../components/Knap.astro";
+import Prodshelf from "../../components/Prodshelf.astro";
 import "../../styles/style.css";
 
 export async function getStaticPaths() {
@@ -166,12 +168,18 @@ const { item } = Astro.props;
       <section id="form">
         <Form />
       </section>
+      <section class="products">
+        <Prodshelf text="Maybe yould like these" />
+      </section>
     </main>
     <Footer />
   </body>
 </html>
 
 <style>
+  .products {
+    padding-top: 5rem;
+  }
   .size {
     border-bottom: 1px solid var(--black);
     display: flex;
