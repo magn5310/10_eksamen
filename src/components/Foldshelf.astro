@@ -189,6 +189,59 @@ import Knap from "./Knap.astro";
       opacity: 1;
     }
   }
+
+  @media (max-width: 800px) {
+    .item h3 {
+      position: absolute;
+      top: 1rem;
+      rotate: 0deg;
+      color: var(--black);
+      font-weight: 100;
+      margin-left: 1rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 800px;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .item {
+      position: relative;
+      display: flex;
+      justify-content: left;
+      border: 1px solid var(--black);
+      width: 100%;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      transition: 1s ease;
+      cursor: pointer;
+      background-color: var(--secondarycolor);
+    }
+
+    .item .img {
+      height: 550px;
+
+      background-position: center;
+      background-size: cover;
+
+      opacity: 0%;
+      transition: 0.5s ease;
+
+      z-index: -1;
+      transition: 0.2s ease;
+    }
+
+    .item.active {
+      transition: 1s ease;
+      width: 100%;
+      height: 100%;
+      justify-content: left;
+      cursor: auto;
+    }
+  }
 </style>
 
 <script>
