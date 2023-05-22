@@ -40,6 +40,10 @@
           My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and creating a
           universe of jewlery artwear.
         </p>
+        <p>
+          While I have previously dabbled in conceptual photography, I always felt something was missing, until I discovered the world of jewelry crafts. Since then, I have been completely captivated
+          by the artform and have never looked back.
+        </p>
         <div class="img_container grid2">
           <img src="../../img/louise2.png" alt="" />
         </div>
@@ -90,6 +94,9 @@
     height: 100%;
   }
 
+  .content.louise {
+    margin-left: 10rem;
+  }
   .grid_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -99,7 +106,10 @@
   }
 
   .grid1 {
-    grid-column: span1;
+    grid-area: 3/2;
+  }
+  .grid2 {
+    grid-area: 3;
   }
   .img_container img {
     box-sizing: border-box;
