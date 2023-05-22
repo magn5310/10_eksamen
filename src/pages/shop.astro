@@ -43,7 +43,6 @@ const data = await respons.json();
       })
     }
 
-    <Prodshelf text="the rings we have in stock" />
     <Prodshelf text="Our favorites" />
     <Prodshelf text="rings from previous work" />
     <div class="order">
@@ -59,6 +58,8 @@ const data = await respons.json();
     }
     h1 {
       margin-left: 1rem;
+      margin-bottom: -2rem;
+      margin-top: 8rem;
     }
     h2 {
       margin-left: 1rem;
@@ -75,6 +76,9 @@ const data = await respons.json();
     @media (max-width: 800px) {
       .order {
         margin-bottom: 3rem;
+      }
+      h1 {
+        margin-bottom: -1rem;
       }
     }
   </style>
