@@ -37,12 +37,13 @@ const data = await respons.json();
       <h1>Handcrafted Artwear</h1>
       <h3>by cehofski</h3>
     </section>
-    {
+    <!-- {
       data.map((item) => {
         return <Prodshelf text="the rings we have in stock" name={item.name} info={item.text} img1={"../../img/" + item.img1 + ".webp"} img2={"../../img/" + item.img2 + ".webp"} img3={"../../img/" + item.img3 + ".webp"} img4={"../../img/" + item.img4 + ".webp"} price={item.price} type={item.type} id={"/undersider/" + item.id} materials={item.materiale} sten={item.sten} />;
       })
-    }
+    } -->
 
+    <Prodshelf text="the rings we have in stock" />
     <Prodshelf text="Our favorites" />
     <Prodshelf text="rings from previous work" />
     <div class="order">

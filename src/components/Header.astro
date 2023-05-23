@@ -2,7 +2,7 @@
   <nav>
     <a href="/"> <img class="logo" src="/img/cehofski_silver.webp " alt="" /></a>
 
-    <div>
+    <div class="nav-menu">
       <a href="/shop">
         <h4 class="navknap">shop</h4>
       </a>
@@ -10,9 +10,15 @@
         <h4 class="navknap">about</h4>
       </a>
     </div>
+    <div class="burger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
   </nav>
 </header>
 
+<script src="../scripts/burger.js"></script>
 <style>
   header {
     position: fixed;
@@ -47,5 +53,64 @@
   }
   .logo {
     margin-left: 0.5rem;
+  }
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--primarycolor);
+  }
+
+  @media (max-width: 800px) {
+    .burger {
+      display: block;
+      margin-right: 1rem;
+    }
+    nav.active {
+      background-color: var(--primarycolor);
+      transition: 0.5s;
+    }
+    .burger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: white;
+      transition: 0.5s ease-in-out;
+    }
+    .burger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: white;
+      transition: 0.5s ease-in-out;
+    }
+    .nav-menu {
+      position: absolute;
+
+      top: -1250%;
+      gap: 0;
+      flex-direction: column;
+      background-color: var(--primarycolor);
+      width: 100%;
+      height: 100vh;
+      transition: 0.5s;
+    }
+    .nav-menu > * {
+      text-align: center;
+    }
+    .navknap {
+      font-size: 8rem;
+    }
+    .nav-menu.active {
+      top: 100%;
+    }
+
+    a {
+      color: white;
+    }
   }
 </style>

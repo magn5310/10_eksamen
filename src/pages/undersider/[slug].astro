@@ -12,8 +12,7 @@ export async function getStaticPaths() {
 
   const options = {
     headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4",
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4",
     },
   };
 
@@ -169,7 +168,7 @@ const { item } = Astro.props;
         <Form />
       </section>
       <section class="products">
-        <Prodshelf text="Maybe yould like these" />
+        <Prodshelf text="Maybe you would like these" />
       </section>
     </main>
     <Footer />
@@ -256,7 +255,6 @@ const { item } = Astro.props;
   span {
     position: relative;
     opacity: 0;
-    float: left;
     transform: rotate(90deg);
     animation: letterup 0.75s forwards;
 
@@ -358,5 +356,13 @@ const { item } = Astro.props;
   }
   a {
     text-decoration: none;
+  }
+  @media (max-width: 800px) {
+    .header {
+      height: 260px;
+    }
+    .img_container img {
+      height: 10rem;
+    }
   }
 </style>
