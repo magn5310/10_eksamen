@@ -25,29 +25,27 @@ import "../styles/style.css";
     <Header />
     <main>
       <div class="hero">
-        <div class="tint">
-          <video autoplay loop muted>
-            <source src="/video/bgvid_1.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h1>
-          <span>C</span>
-          <span>E</span>
-          <span>H</span>
-          <span>O</span>
-          <span>F</span>
-          <span>S</span>
-          <span>K</span>
-          <span>I</span>
-        </h1>
+        <video autoplay loop muted>
+          <source src="/video/bgvid_1.mp4" type="video/mp4" />
+        </video>
       </div>
-      <Foldshelf />
-      <Grammen />
-      <Order />
-      <Prodshelf text="the rings we have in stock" />
+      <h1>
+        <span>C</span>
+        <span>E</span>
+        <span>H</span>
+        <span>O</span>
+        <span>F</span>
+        <span>S</span>
+        <span>K</span>
+        <span>I</span>
+      </h1>
     </main>
-    <Footer />
+    <Foldshelf />
+    <Grammen />
+    <Order />
+    <Prodshelf text="the rings we have in stock" />
   </body>
+  <Footer />
 </html>
 
 <style>
@@ -122,7 +120,10 @@ import "../styles/style.css";
   }
   @media (max-width: 800px) {
     h1 {
-      margin-left: 0.5rem;
+      font-size: 7rem;
+    }
+    video {
+      top: 4%;
     }
   }
 </style>
