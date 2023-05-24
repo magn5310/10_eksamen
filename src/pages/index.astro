@@ -25,10 +25,11 @@ import "../styles/style.css";
     <Header />
     <main>
       <div class="hero">
-        <video autoplay loop muted>
-          <source src="/video/bgvid.mp4" type="video/mp4" />
-        </video>
-
+        <div class="tint">
+          <video autoplay loop muted>
+            <source src="/video/bgvid_1.mp4" type="video/mp4" />
+          </video>
+        </div>
         <h1>
           <span>C</span>
           <span>E</span>
@@ -54,9 +55,15 @@ import "../styles/style.css";
     overflow: hidden;
     text-align: center;
     position: relative;
+    padding-left: 1rem;
     font-size: 30.5vw;
     padding-top: 4.2rem;
-    padding-left: 1rem;
+  }
+  .bgvid {
+    /* background-image: url(/video/baggrundsvideo.mp4); */
+  }
+  .hero {
+    margin-bottom: 5rem;
   }
 
   video {
@@ -66,9 +73,7 @@ import "../styles/style.css";
     aspect-ratio: 5/4;
     width: 100%;
   }
-  .hero {
-    margin-bottom: 5rem;
-  }
+
   span {
     position: relative;
     opacity: 0;
