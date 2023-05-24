@@ -4,13 +4,28 @@
 <div class="container">
   <section id="scroll">
     <div class="content">
-      <div>
-        <h1>ABOUT</h1>
-        <p>At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects their personal style and story.</p>
+      <div class="grid_welcome">
+        <h1>The world of cehofski</h1>
+        <p>Welcome to the world of Cehofski jewelry. <br /> <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.</p>
+
+        <div class="img_container">
+          <img src="../../img/ring1.webp" alt="" />
+        </div>
       </div>
     </div>
-    <div class="img_container">
-      <img src="../../img/ring1.webp" alt="" />
+
+    <div class="content louise">
+      <h2>Louise <br /> Cehofski</h2>
+      <div class="grid_1_1_1_1">
+        <div class="img_container grid1">
+          <img src="/img/louise.webp" alt="" />
+        </div>
+        <p>My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and creating a universe of jewlery artwear.</p>
+        <p>While I have previously dabbled in conceptual photography, I always felt something was missing, until I discovered the world of jewelry crafts. Since then, I have been completely captivated by the artform and have never looked back.</p>
+        <div class="img_container grid2">
+          <img src="/img/louise2.webp" alt="" />
+        </div>
+      </div>
     </div>
     <div class="grid_1_1_1_1">
       <div class="img_container">
@@ -27,18 +42,19 @@
       </div>
     </div>
 
-    <div class="content louise">
-      <h2>Louise Cehofski</h2>
-      <div class="grid_1_1_1_1">
-        <div class="img_container grid1">
-          <img src="/img/louise.webp" alt="" />
-        </div>
-        <p>My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and creating a universe of jewlery artwear.</p>
-        <p>While I have previously dabbled in conceptual photography, I always felt something was missing, until I discovered the world of jewelry crafts. Since then, I have been completely captivated by the artform and have never looked back.</p>
-        <div class="img_container grid2">
-          <img src="/img/louise2.webp" alt="" />
-        </div>
-      </div>
+    <h3>signature <br /> rings</h3>
+    <h2>Handcrafted</h2>
+
+    <div class="return">
+      <a href="/">
+        <h2>home</h2>
+      </a>
+      <a href="/shop">
+        <h2>Shop</h2>
+      </a>
+      <a href="/about">
+        <h2>About</h2>
+      </a>
     </div>
   </section>
 </div>
@@ -115,7 +131,6 @@
     width: 100vw;
     height: 500vh;
     overflow-x: hidden;
-    background-color: var(--secondarycolor);
   }
 
   .container section {
@@ -129,6 +144,7 @@
     height: 100vh;
     padding-top: 80px;
     padding-bottom: 80px;
+    background: linear-gradient(90deg, var(--secondarycolor) 10%, var(--primarycolor) 50%, var(--secondarycolor) 90%);
   }
 
   #scrolling {
@@ -148,12 +164,50 @@
     background-color: var(--primarycolor);
     z-index: 9999;
   }
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+  .return {
+    margin-left: 20rem;
+    margin-block: auto;
+  }
+  .return h2 {
+    margin-bottom: 3rem;
+  }
+  .grid_welcome {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid_welcome .img_container {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  h1 {
+    grid-column: 1/3;
+    font-size: 5.7rem;
+  }
+
+  h2 {
+    color: white;
+  }
+  h3 {
+    color: white;
+  }
+  .louise p {
+    color: white;
+  }
   @media (max-width: 800px) {
     .grid_1_1_1_1 .img_container {
       width: 150%;
     }
     .grid_1_1_1_1 {
       gap: 1rem 7.7rem;
+    }
+    .return {
+      margin-left: 10rem;
     }
   }
 </style>

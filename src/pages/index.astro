@@ -24,6 +24,11 @@ import "../styles/style.css";
   <body>
     <Header />
     <main>
+      <div class="tint">
+        <video autoplay loop muted>
+          <source src="/video/baggrundsvideo.mp4" type="video/mp4" />
+        </video>
+      </div>
       <h1>
         <span>C</span>
         <span>E</span>
@@ -34,6 +39,7 @@ import "../styles/style.css";
         <span>K</span>
         <span>I</span>
       </h1>
+
       <Foldshelf />
       <Grammen />
       <Order />
@@ -46,17 +52,29 @@ import "../styles/style.css";
 <style>
   h1 {
     overflow: hidden;
-    margin-left: 1rem;
+    text-align: center;
     position: relative;
-
+    background-color: #3734ff89;
     font-size: 30.5vw;
+    padding-top: 4.2rem;
+  }
+  .bgvid {
+    /* background-image: url(/video/baggrundsvideo.mp4); */
+  }
+
+  video {
+    position: absolute;
+    z-index: -1;
+    top: -50%;
+    aspect-ratio: 5/4;
+    width: 100%;
   }
 
   span {
     position: relative;
     opacity: 0;
     float: left;
-
+    color: white;
     animation: letterup 0.75s forwards;
   }
 
