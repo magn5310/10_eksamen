@@ -18,13 +18,20 @@
       <h2>Louise <br /> Cehofski</h2>
       <div class="grid_1_1_1_1">
         <div class="img_container grid1">
-          <img src="/img/louise.webp" alt="" />
+          <img src="/img/about_louise_2.webp" alt="" />
         </div>
-        <p>My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and creating a universe of jewlery artwear.</p>
-        <p>While I have previously dabbled in conceptual photography, I always felt something was missing, until I discovered the world of jewelry crafts. Since then, I have been completely captivated by the artform and have never looked back.</p>
+        <p>
+          My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and creating a
+          universe of jewlery artwear.
+        </p>
+
         <div class="img_container grid2">
-          <img src="/img/louise2.webp" alt="" />
+          <img src="/img/about_louise_1.webp" alt="" />
         </div>
+        <p>
+          While I have previously dabbled in conceptual photography, I always felt something was missing, until I discovered the world of jewelry crafts. Since then, I have been completely captivated
+          by the artform and have never looked back.
+        </p>
       </div>
     </div>
     <div class="grid_1_1_1_1">
@@ -93,7 +100,7 @@
   .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     height: 100%;
   }
@@ -112,11 +119,23 @@
     gap: 1rem;
   }
 
-  .grid1 {
-    grid-area: 3/2;
+  .grid_1_1_1_1 p:last-of-type {
+    grid-area: 2/2;
   }
+
+  .grid1 {
+    grid-area: 1/2;
+    grid-row: 1/3;
+  }
+
   .grid2 {
-    grid-area: 3;
+    grid-area: 2;
+    grid-row: 2/4;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .grid2 img {
   }
   .img_container img {
     box-sizing: border-box;
@@ -177,8 +196,8 @@
   }
   .grid_welcome {
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 2fr;
+    grid-template-columns: auto 2fr;
   }
 
   .grid_welcome .img_container {
@@ -187,7 +206,6 @@
   }
   h1 {
     grid-column: 1/3;
-    font-size: 5.7rem;
   }
 
   h2 {
