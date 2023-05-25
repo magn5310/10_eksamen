@@ -1,0 +1,217 @@
+---
+import Knap from "./Knap.astro";
+
+const { name, img, slug, class1, class2, highlighted } = Astro.props;
+---
+
+{
+  highlighted && (
+    <>
+      <div class={"item " + class1 + " " + class2}>
+        <h3>{name}</h3>
+        <div class="knap">
+          <Knap color="white" text="shop" link={"undersider/" + slug} />
+        </div>
+        <div class="img" />
+      </div>
+    </>
+  )
+}
+<style>
+  .knap {
+    opacity: 0%;
+    position: absolute;
+    bottom: 2rem;
+    right: 1.5rem;
+    transition: 0.5s ease;
+  }
+
+  .active .knap {
+    opacity: 100%;
+    bottom: 2rem;
+    right: 1.5rem;
+    transition: 1s ease;
+  }
+  .text {
+    margin-left: 1rem;
+  }
+  h2 {
+    margin: 0;
+    margin-top: 3rem;
+    line-height: 0.7;
+  }
+  p {
+    margin: 0;
+    max-width: 60ch;
+    color: var(--primarycolor);
+  }
+
+  .container {
+    display: flex;
+    height: 500px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--black);
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+    transition: 1s ease;
+    cursor: pointer;
+    background-color: var(--secondarycolor);
+  }
+
+  .item.active {
+    transition: 1s ease;
+    width: 100%;
+    justify-content: left;
+    cursor: auto;
+  }
+
+  .item h3 {
+    position: absolute;
+    top: 4rem;
+    rotate: 90deg;
+    color: var(--black);
+    font-weight: 100;
+    margin-left: -1rem;
+  }
+  .item.active h3 {
+    color: var(--secondarycolor);
+  }
+
+  .first .img {
+    background-image: url(/img/ring1.webp);
+  }
+  .second .img {
+    background-image: url(/img/ring2.webp);
+  }
+  .third .img {
+    background-image: url(/img/ring3.webp);
+  }
+  .fourth .img {
+    background-image: url(/img/ring4.webp);
+  }
+  .fifth .img {
+    background-image: url(/img/signaturering_1.webp);
+  }
+
+  .item .img {
+    height: 500px;
+    width: 1800px;
+
+    background-position: center;
+    background-size: cover;
+
+    opacity: 0%;
+    transition: 0.5s ease;
+
+    z-index: -1;
+    transition: 0.2s ease;
+  }
+
+  .item:hover h3 {
+    color: var(--secondarycolor);
+  }
+  .item:hover .img {
+    opacity: 100%;
+  }
+
+  .item.active .img {
+    transition: 2s ease;
+    opacity: 100%;
+  }
+
+  .item {
+    position: relative;
+    opacity: 0;
+
+    animation: in 0.5s forwards;
+  }
+
+  .item:nth-child(4) {
+    animation-delay: 0.1s;
+  }
+  .item:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .item:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .item:nth-child(1) {
+    animation: in 1.4s forwards;
+    animation-delay: 0.35s;
+  }
+
+  @keyframes in {
+    0% {
+      right: -120%;
+      opacity: 0;
+    }
+
+    100% {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .item h3 {
+      position: absolute;
+      top: 1rem;
+      rotate: 0deg;
+      color: var(--black);
+      font-weight: 100;
+      margin-left: 1rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 800px;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .item {
+      position: relative;
+      display: flex;
+      justify-content: left;
+      border: 1px solid var(--black);
+      width: 100%;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      transition: 1s ease;
+      cursor: pointer;
+      background-color: var(--secondarycolor);
+    }
+
+    .item .img {
+      height: 550px;
+
+      background-position: center;
+      background-size: cover;
+
+      opacity: 0%;
+      transition: 0.5s ease;
+
+      z-index: -1;
+      transition: 0.2s ease;
+    }
+
+    .item.active {
+      transition: 1s ease;
+      width: 100%;
+      height: 100%;
+      justify-content: left;
+      cursor: auto;
+    }
+    h2 {
+      line-height: 4rem;
+    }
+  }
+</style>
