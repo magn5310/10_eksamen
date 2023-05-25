@@ -22,7 +22,7 @@ const { name, img, slug, class1, class2, highlighted } = Astro.props;
     opacity: 0%;
     position: absolute;
     bottom: 2rem;
-    right: 1.5rem;
+    right: -4rem;
     transition: 0.5s ease;
   }
 
@@ -68,20 +68,24 @@ const { name, img, slug, class1, class2, highlighted } = Astro.props;
   .item.active {
     transition: 1s ease;
     width: 100%;
-    justify-content: left;
+
     cursor: auto;
   }
 
   .item h3 {
     position: absolute;
     top: 4rem;
+    left: auto;
     rotate: 90deg;
     color: var(--black);
     font-weight: 100;
     margin-left: -1rem;
+    height: ;
   }
   .item.active h3 {
     color: var(--secondarycolor);
+
+    left: 1rem;
   }
 
   .first .img {
