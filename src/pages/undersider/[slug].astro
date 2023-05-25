@@ -12,7 +12,8 @@ export async function getStaticPaths() {
 
   const options = {
     headers: {
-      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4",
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4",
     },
   };
 
@@ -179,6 +180,7 @@ const { item } = Astro.props;
   .products {
     padding-top: 5rem;
   }
+
   .size {
     border-bottom: 1px solid var(--black);
     display: flex;
@@ -228,7 +230,7 @@ const { item } = Astro.props;
   }
   .header {
     overflow: hidden;
-    height: 700px;
+    height: 500px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;

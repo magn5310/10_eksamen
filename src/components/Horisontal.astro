@@ -103,8 +103,7 @@
     margin-left: 1rem;
     display: flex;
     overflow: hidden;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    width: 1000px;
   }
   .louise {
     flex-direction: column;
@@ -163,21 +162,20 @@
   }
   .container {
     width: 100vw;
-    height: 500vh;
+    height: 2850px;
     overflow-x: hidden;
   }
 
   .container section {
-    width: 500vw;
-    margin-top: 20px;
+    width: 5000px;
     position: fixed;
   }
   #scroll {
     display: flex;
     gap: 1rem;
     height: 100vh;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 130px;
+    padding-bottom: 200px;
     background: linear-gradient(90deg, var(--secondarycolor) 12%, var(--primarycolor) 17%, var(--secondarycolor) 80%);
   }
 
@@ -203,15 +201,20 @@
     text-align: center;
   }
   .return {
-    margin-left: 20rem;
     margin-block: auto;
     width: 1000px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 3rem;
   }
   .return h2 {
-    margin-bottom: 3rem;
+    color: var(--primarycolor);
+    font-size: 6rem;
+    transition: 0.2s ease-in-out;
+  }
+  .return h2:hover {
+    transition: 0.2s ease-in-out;
   }
   .grid_welcome {
     display: grid;
