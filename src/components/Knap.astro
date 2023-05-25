@@ -2,11 +2,13 @@
 const { text, color, link } = Astro.props;
 ---
 
-<a class={color} href={link}> {text}</a>
+<a class={color} href={link}>
+  {text}
+</a>
 
 <style>
   a {
-    padding: 0.7rem 2.1rem 0.7rem 2.1rem;
+    padding: 0.7rem 2.1rem 0.5rem 2.1rem;
     font-family: "Perandory";
     font-size: 1.5rem;
     font-weight: 100;
