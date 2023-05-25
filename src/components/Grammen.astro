@@ -69,7 +69,6 @@
       .gallery {
         display: flex;
         flex-wrap: wrap;
-
         margin-left: 1rem;
         margin-right: 1rem;
         gap: 0.5rem;
@@ -98,7 +97,6 @@
 
       .info {
         background-color: var(--secondarycolor);
-
         padding: 1rem;
         position: relative;
         transform-origin: top;
@@ -142,6 +140,22 @@
         text-decoration: none;
         border: transparent;
         color: var(--primarycolor);
+      }
+      @media (max-width: 800px) {
+        .img {
+          flex: 5;
+          overflow: hidden;
+          min-height: 200px;
+          max-height: 200px;
+          min-width: 200px;
+        }
+        a {
+          flex: 5;
+          overflow: hidden;
+          min-height: 200px;
+          max-height: 350px;
+          min-width: 170px;
+        }
       }
     </style>
   </div>
