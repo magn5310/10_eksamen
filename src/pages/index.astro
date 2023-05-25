@@ -3,6 +3,7 @@ import Foldshelf from "../components/Foldshelf.astro";
 import Footer from "../components/Footer.astro";
 import Grammen from "../components/Grammen.astro";
 import Header from "../components/Header.astro";
+import Knap from "../components/Knap.astro";
 import Order from "../components/Order.astro";
 import Prodshelf from "../components/Prodshelf.astro";
 import "../styles/style.css";
@@ -28,7 +29,6 @@ import "../styles/style.css";
         <video autoplay loop muted>
           <source src="/video/bgvid_1.mp4" type="video/mp4" />
         </video>
-
         <h1>
           <span>C</span>
           <span>E</span>
@@ -39,6 +39,7 @@ import "../styles/style.css";
           <span>K</span>
           <span>I</span>
         </h1>
+        <h3>Handcrafted artwear for nymphs and satyrs</h3>
       </div>
     </main>
     <Foldshelf />
@@ -52,28 +53,40 @@ import "../styles/style.css";
 <style>
   h1 {
     overflow: hidden;
-    text-align: center;
-    position: relative;
-    margin: auto;
-    font-size: 30.5vw;
-
+    font-size: 28vw;
     grid-column: 1/3;
     grid-row: 1/3;
+    margin-inline: auto;
+    padding-top: 5%;
   }
-  .bgvid {
-    /* background-image: url(/video/baggrundsvideo.mp4); */
+  .hero_info {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin: auto;
   }
+  .hero_knap {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin: auto;
+
+    z-index: 99999;
+  }
+
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: -15%;
   }
 
   video {
     z-index: -1;
-    width: 100%;
+    width: 100vw;
     grid-column: 1/3;
     grid-row: 1/3;
+    height: 70%;
+    object-fit: cover;
+    align-self: stretch;
   }
 
   span {
@@ -122,9 +135,32 @@ import "../styles/style.css";
       opacity: 1;
     }
   }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  h3 {
+    animation: fade 1s forwards;
+    animation-delay: 1s;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+    padding-top: 8%;
+    opacity: 0;
+  }
   @media (max-width: 800px) {
     h1 {
       font-size: 7rem;
+    }
+    h3 {
+      font-size: 1rem;
     }
   }
 </style>
