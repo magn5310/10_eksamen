@@ -28,6 +28,7 @@
     background-color: var(--secondarycolor);
     z-index: 1000;
   }
+
   nav {
     background-color: var(--secondarycolor);
     display: flex;
@@ -35,10 +36,24 @@
     align-items: center;
   }
   a {
+    position: relative;
     text-decoration: none;
     color: var(--primarycolor);
   }
-  a:hover {
+  .navknap::after {
+    content: "";
+    position: absolute;
+    background-color: var(--primarycolor);
+    height: 1px;
+    width: 0;
+    left: 15%;
+    bottom: 1rem;
+    margin: auto;
+    transition: 0.3s;
+    transform-origin: center;
+  }
+  .navknap:hover::after {
+    width: 75%;
   }
   div {
     display: flex;
@@ -52,6 +67,7 @@
   }
   .navknap {
     font-size: 2rem;
+    margin-bottom: -1px;
   }
   .logo {
     margin-left: 0.5rem;

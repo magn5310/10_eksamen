@@ -56,10 +56,24 @@
   a {
     text-decoration: none;
   }
-
-  a p:hover {
-    border-bottom: 1px solid white;
+  p::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -0.1rem;
+    margin: auto;
+    transition: 0.3s;
   }
+  p:hover::after {
+    width: 100%;
+  }
+  p {
+    position: relative;
+  }
+
   .logo h2 {
     color: silver;
     margin-inline: 3rem;
