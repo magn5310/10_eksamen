@@ -1,14 +1,16 @@
 ---
 import Knap from "./Knap.astro";
 
-const { name, img, slug, class1, class2, highlighted } = Astro.props;
+const { name, img, second_name, slug, class1, class2, highlighted } = Astro.props;
 ---
 
 {
   highlighted && (
     <>
       <div class={"item " + class1 + " " + class2}>
-        <h3>{name}</h3>
+        {/* Betinget rendering baseret på værdien af second_name */}
+        {second_name ? <h3>{name + " " + second_name}</h3> : <h3>{name}</h3>}
+
         <div class="knap">
           <Knap color="white" text="shop" link={"undersider/" + slug} />
         </div>

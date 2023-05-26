@@ -32,27 +32,27 @@ const fifth = data.filter((item) => item.highlighted == "5");
   <div class="container">
     {
       first.map((item) => {
-        return <Foldcard name={item.name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="active" class2="fifth" />;
+        return <Foldcard name={item.name} second_name={item.second_name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="active" class2="fifth" />;
       })
     }
     {
       second.map((item) => {
-        return <Foldcard name={item.name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="first" />;
+        return <Foldcard name={item.name} second_name={item.second_name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="first" />;
       })
     }
     {
       third.map((item) => {
-        return <Foldcard name={item.name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="second" />;
+        return <Foldcard name={item.name} second_name={item.second_name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="second" />;
       })
     }
     {
       fourth.map((item) => {
-        return <Foldcard name={item.name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="third" />;
+        return <Foldcard name={item.name} second_name={item.second_name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="third" />;
       })
     }
     {
       fifth.map((item) => {
-        return <Foldcard name={item.name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="fourth" />;
+        return <Foldcard name={item.name} second_name={item.second_name} img={item.img} slug={item.id} highlighted={item.highlighted} class1="" class2="fourth" />;
       })
     }
   </div>
