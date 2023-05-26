@@ -18,12 +18,13 @@ const data = await respons.json();
 <div class="outer">
   <div class="inner">
     <h2>{text}</h2>
-
-    {
-      data.map((item) => {
-        return <Card text="the rings we have in stock" name={item.name} info={item.text} img1={"../../img/" + item.img1 + ".webp"} img2={"../../img/" + item.img2 + ".webp"} img3={"../../img/" + item.img3 + ".webp"} img4={"../../img/" + item.img4 + ".webp"} price={item.price} type={item.type} id={"/undersider/" + item.id} materials={item.materiale} sten={item.sten} />;
-      })
-    }
+    <div class="card">
+      {
+        data.map((item) => {
+          return <Card text="the rings we have in stock" name={item.name} info={item.text} img1={"../../img/" + item.img1 + ".webp"} img2={"../../img/" + item.img2 + ".webp"} img3={"../../img/" + item.img3 + ".webp"} img4={"../../img/" + item.img4 + ".webp"} price={item.price} type={item.type} id={"/undersider/" + item.id} materials={item.materiale} sten={item.sten} />;
+        })
+      }
+    </div>
   </div>
 </div>
 <style>
@@ -50,6 +51,9 @@ const data = await respons.json();
     h2 {
       min-width: 12rem;
       margin-right: -5rem;
+    }
+    .card {
+      margin-left: 7rem;
     }
   }
 </style>
