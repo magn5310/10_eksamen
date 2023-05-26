@@ -1,8 +1,8 @@
 ---
-const { text, color, link } = Astro.props;
+const { text, color, link, type } = Astro.props;
 ---
 
-<a class={color} href={link}>
+<a class={color + " " + type} href={link}>
   {text}
 </a>
 
@@ -15,6 +15,16 @@ const { text, color, link } = Astro.props;
     text-decoration: none;
     cursor: pointer;
     line-height: 1rem;
+  }
+
+  .phone {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2.1rem 1rem 2.1rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .blue {

@@ -179,7 +179,7 @@ const { item } = Astro.props;
          
         </h1>
       </div>
-      <section class="content">
+      <section class="content computer">
         <div class="img_container">
           {item.img2 && <img src={"../../img/" + item.img2 + ".webp"} alt={item.name + " " + item.type} />}
 
@@ -232,6 +232,69 @@ const { item } = Astro.props;
             </a>
           </div>
         </div>
+      </section>
+
+
+
+      <section class="content phone">
+
+      
+        <div class="img_container">
+          {item.img2 && <img src={"../../img/" + item.img2 + ".webp"} alt={item.name + " " + item.type} />}
+
+          {item.img3 && <img src={"../../img/" + item.img3 + ".webp"} alt={item.name + " " + item.type} />}
+          {item.img4 && <img src={"../../img/" + item.img4 + ".webp"} alt={item.name + " " + item.type} />}
+        </div>
+            <div class="indhold">
+            <div class="top">
+              <h4>{item.type}</h4>
+            </div>
+
+            <h2>{item.name + " " + item.second_name}</h2>
+            <h3>{item.price + " DKK"}</h3> 
+        
+
+        <div class="info">
+          <h3>Info</h3>
+
+            <div class="size">
+              <p>Size</p>
+              <p>{item.size}</p>
+            </div>
+
+            {
+              item.materiale && (
+                <div class="text">
+                  <p>Materials</p>
+                  <p>{item.materiale}</p>
+                </div>
+              )
+            }
+            {
+              item.sten && (
+                <div class="text">
+                  <p>Stone</p>
+                  <p>{item.sten}</p>
+                </div>
+              )
+            }
+            {
+              item.text && (
+                <div class="text">
+                  <p>Description</p>
+                  <p>{item.text}</p>
+                </div>
+              )
+            }
+
+         
+        </div>
+       
+      </div>
+      <div class="shop">
+        <Knap color="blue" text="shop" type="phone" />
+
+      </div>
       </section>
       <section id="form">
         <Form />
@@ -316,8 +379,6 @@ const { item } = Astro.props;
   }
 
   h1 {
-
-    
     position: relative;
     display: flex;
     gap: 0rem;
@@ -429,7 +490,7 @@ const { item } = Astro.props;
   .header h1 {
     z-index: 2;
     grid-area: 1/1;
-    padding-top: 5rem;
+
     color: var(--secondarycolor);
   }
 
@@ -458,12 +519,58 @@ const { item } = Astro.props;
   a {
     text-decoration: none;
   }
+  .phone{
+    display: none;
+  }
   @media (max-width: 800px) {
+    .computer{
+      display: none;
+    }
+    .phone{
+    display: block;
+  }
+
+
+ 
     .header {
       height: 260px;
+
     }
     .img_container img {
-      height: 10rem;
+      width: 100%;
+      height: auto;
+
     }
+    .indhold{
+      margin-left: 1rem;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+
+    }
+    .size {
+      margin-top: 0;
+    }
+    .info{
+      padding: 0;
+
+      margin-right: 1rem;
+margin-top: 1rem;
+      position: inherit;
+
+    }
+    .shop{
+position: sticky;
+bottom: 1rem;
+width: 100%;
+display: flex;
+    }
+
+#form{
+  padding-top: 0rem;
+  margin-top: 4rem;
+}
+
+
+
   }
 </style>
