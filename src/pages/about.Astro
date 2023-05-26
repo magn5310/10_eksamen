@@ -22,11 +22,75 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
-    <Horisontal />
+    <main>
+      <div class="container">
+        <div class="indhold">
+          <div class="content">
+            <div class="grid_welcome">
+              <h1>The world of cehofski</h1>
+              <p>
+                Welcome to the world of Cehofski jewelry. <br />
+                <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.<br /><br />Scroll along the page to learn more about Cehofski.
+              </p>
+
+              <div class="img_container">
+                <img src="../../img/ring1.webp" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="grid_welcome">
+              <h1>The world of cehofski</h1>
+              <p>
+                Welcome to the world of Cehofski jewelry. <br />
+                <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.<br /><br />Scroll along the page to learn more about Cehofski.
+              </p>
+
+              <div class="img_container">
+                <img src="../../img/ring1.webp" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="grid_welcome">
+              <h1>The world of cehofski</h1>
+              <p>
+                Welcome to the world of Cehofski jewelry. <br />
+                <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.<br /><br />Scroll along the page to learn more about Cehofski.
+              </p>
+
+              <div class="img_container">
+                <img src="../../img/ring1.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
 <style>
-  a {
-    text-decoration: none;
+  .container {
+    overflow: auto; /* Tillader både vertikal og horisontal scrolling */
+    width: 100%; /* Angiv den ønskede bredde */
+    height: calc(100vh - 80px); /* Angiv den ønskede højde */
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* Glat rulningseffekt */
+  }
+
+  .indhold {
+    display: flex; /* Lader indholdselementerne ligge vandret ved siden af hinanden */
+    scroll-snap-align: start; /* Indholdet "snapper" til startpositionen */
+    padding: 10px; /* Juster efter behov */
+    height: 100%;
+    display: flex;
+  }
+
+  .content {
+    margin-left: 1rem;
+    flex-shrink: 0;
+
+    height: 100%;
   }
 </style>
