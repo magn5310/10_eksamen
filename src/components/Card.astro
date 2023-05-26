@@ -1,13 +1,15 @@
 ---
 import Knap from "../components/Knap.astro";
-const { name, info, img1, img2, img3, img4, price, type, id, materials, sten } = Astro.props;
+const { name, info, img1, img2, img3, img4, price, type, id, materials, sten, second_name } = Astro.props;
 ---
 
 <div class="img_container">
   <img src={"/img/" + img1} alt="" />
   <div class="layout">
     <div>
-      <h3 class="cardh2">{name}</h3>
+      {/* Betinget rendering baseret på værdien af second_name */}
+      {second_name ? <h3 class="cardh2">{name + " " + second_name}</h3> : <h3 class="cardh2">{name}</h3>}
+
       <p>{info}</p>
     </div>
     <div class="knap">

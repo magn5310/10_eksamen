@@ -3,7 +3,8 @@ import Foldcard from "./Foldcard.astro";
 import Knap from "./Knap.astro";
 
 const url = "https://fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/stock";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4";
 
 const respons = await fetch(url, {
   method: "GET",
@@ -205,7 +206,8 @@ const fifth = data.filter((item) => item.highlighted == "5");
       rotate: 0deg;
       color: var(--black);
       font-weight: 100;
-      margin-left: 1rem;
+
+      left: 1rem;
     }
     .container {
       display: flex;
@@ -227,6 +229,10 @@ const fifth = data.filter((item) => item.highlighted == "5");
       transition: 1s ease;
       cursor: pointer;
       background-color: var(--secondarycolor);
+    }
+    .item.active h3 {
+      left: 1rem;
+      top: 1rem;
     }
 
     .item .img {
