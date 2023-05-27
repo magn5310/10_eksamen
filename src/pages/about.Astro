@@ -26,43 +26,80 @@ import Header from "../components/Header.astro";
       <div class="container">
         <div class="indhold">
           <div class="content">
-            <div class="grid_welcome">
+            <div class="grid_1_1">
               <h1>The world of cehofski</h1>
               <p>
                 Welcome to the world of Cehofski jewelry. <br />
                 <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.<br /><br />Scroll along the page to learn more about Cehofski.
               </p>
 
-              <div class="img_container">
-                <img src="../../img/ring1.webp" alt="" />
+              <div class="vid_container">
+                <video autoplay muted loop src="../../img/cehofskivideo.webm"></video>
               </div>
             </div>
           </div>
-          <div class="content">
-            <div class="grid_welcome">
-              <h1>The world of cehofski</h1>
+          <div class="content louise">
+            <div class="grid_1_1_1_1">
+              <h2>Louise Cehofski</h2>
               <p>
-                Welcome to the world of Cehofski jewelry. <br />
-                <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.<br /><br />Scroll along the page to learn more about Cehofski.
+                My name is Louise Cehofski, I’m a 27-year-old jewelrydesign student based in Copenhagen. over the past four years, I have dedicated myself to refining my jewelry design skills and
+                creating a universe of jewlery artwear.
               </p>
+              <div class="img_container grid1">
+                <img src="/img/about_louise_2.webp" alt="" />
+              </div>
 
+              <div class="img_container grid2">
+                <img src="/img/about_louise_1.webp" alt="" />
+              </div>
+              <p>
+                While I have previously dabbled in conceptual photography, I always felt something was missing, until I discovered the world of jewelry crafts. Since then, I have been completely
+                captivated by the artform and have never looked back.
+              </p>
+            </div>
+          </div>
+          <div class="content signature">
+            <div class="grid">
+              <h2>Signature rings</h2>
               <div class="img_container">
-                <img src="../../img/ring1.webp" alt="" />
+                <img src="../img/signaturering_onhands.webp" alt="" />
+              </div>
+              <div class="img_container">
+                <img src="../img/signaturering_1.webp" alt="" />
+              </div>
+              <div class="img_container">
+                <img src="../img/signaturering_2.webp" alt="" />
               </div>
             </div>
           </div>
-          <div class="content">
-            <div class="grid_welcome">
-              <h1>The world of cehofski</h1>
+          <div class="content crafted">
+            <div class="grid">
+              <h2>HANDCRAFTED</h2>
+              <div class="img_container one">
+                <video autoplay loop muted src="../img/video.webm"></video>
+              </div>
               <p>
-                Welcome to the world of Cehofski jewelry. <br />
-                <br /> Cehofski startet in 2021 as a side project, but has now evolved into the univers you experience today.<br /><br />Scroll along the page to learn more about Cehofski.
+                At Cehofski, each ring is meticulously designed and handcrafted with the utmost care. <br />
+                <br /> No two creations are alike, ensuring that every wearer receives a truly exclusive piece that reflects their personal style and story.
               </p>
-
-              <div class="img_container">
-                <img src="../../img/ring1.webp" alt="" />
+              <div class="img_container two">
+                <img src="../img/process_1.webp" alt="" />
+              </div>
+              <div class="img_container three">
+                <img src="../img/process_2.webp" alt="" />
               </div>
             </div>
+          </div>
+          <div class="content return">
+            <a href="/">
+              <h2>home</h2>
+            </a>
+            <a href="/shop">
+              <h2>Shop</h2>
+            </a>
+            <a href="/about">
+              <h2>About</h2>
+            </a>
           </div>
         </div>
       </div>
@@ -88,9 +125,175 @@ import Header from "../components/Header.astro";
   }
 
   .content {
-    margin-left: 1rem;
     flex-shrink: 0;
-
+    max-width: 1200px;
     height: 100%;
+    overflow: hidden;
+    padding: 2rem;
+  }
+
+  .grid_1_1 {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  .grid_1_1 .vid_container {
+    grid-row: 2;
+    grid-column: 2/5;
+    overflow: hidden;
+  }
+
+  .vid_container video {
+    height: 100%;
+  }
+
+  .grid_1_1 p {
+    grid-row: 2;
+    grid-column: 1/2;
+  }
+
+  h1 {
+    grid-column: 1/5;
+  }
+  .img_container {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .img_container img {
+    width: 100%;
+  }
+
+  .grid_1_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    height: 100%;
+  }
+  .grid_1_1_1_1 .img_container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .content.louise {
+    margin-left: 10rem;
+    width: 1000px;
+  }
+
+  .grid1 {
+    grid-area: 1/2;
+    grid-row: 1/4;
+  }
+
+  .grid2 {
+    grid-area: 2;
+    grid-row: 3/6;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .grid2 img {
+  }
+
+  .signature .grid {
+    display: grid;
+    grid-template-columns: 300px 200px 2fr;
+    grid-template-rows: 1fr 4fr;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .signature .grid .img_container:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .signature .grid .img_container:nth-child(2) {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+  .signature .grid .img_container:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .signature .img_container {
+    display: flex;
+    justify-content: center;
+  }
+  .signature .img_container img {
+    height: 100%;
+    width: auto;
+  }
+
+  .crafted {
+    margin-left: 10rem;
+  }
+
+  .crafted .grid {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .crafted h2 {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+
+  .crafted .img_container img {
+    box-sizing: border-box;
+    min-height: 100%;
+    min-width: 100%;
+    margin: auto;
+  }
+
+  .crafted p {
+    grid-row: 2/5;
+    grid-column: 2;
+    max-width: 20ch;
+    color: var(--black);
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 2/6;
+    width: auto;
+  }
+  .one video {
+    height: 100%;
+  }
+  .two {
+    grid-column: 3;
+    grid-row: 2/4;
+  }
+  .three {
+    grid-column: 3;
+    grid-row: 4/6;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+  .return {
+    margin-block: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .return h2 {
+    color: var(--primarycolor);
+    font-size: 6rem;
+    transition: 0.2s ease-in-out;
+  }
+  .return h2:hover {
+    transition: 0.2s ease-in-out;
   }
 </style>
