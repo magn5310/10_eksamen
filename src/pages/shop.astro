@@ -4,6 +4,7 @@ import Form from "../components/Form.astro";
 import Header from "../components/Header.astro";
 import Order from "../components/Order.astro";
 import Prodshelf from "../components/Prodshelf.astro";
+import Shopgal from "../components/Shopgal.astro";
 import "../styles/style.css";
 
 const url = "https://fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/stock";
@@ -44,9 +45,7 @@ const data = await respons.json();
     } -->
 
     <Prodshelf text="the rings we have in stock" />
-    <div class="gallery">
-      <!-- <img src="/img/ring_1_2.webp" alt="" /> -->
-    </div>
+    <Shopgal />
 
     <div class="order">
       <Order />
@@ -72,6 +71,7 @@ const data = await respons.json();
     section {
       margin-bottom: 3rem;
     }
+
     @media (max-width: 800px) {
       .order {
         margin-bottom: 3rem;
