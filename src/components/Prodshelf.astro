@@ -16,7 +16,7 @@ const respons = await fetch(url, {
 const data = await respons.json();
 ---
 
-<div class="outer">
+<div class="outer" id="in_stock">
   <div class="inner">
     <h2>{text}</h2>
     <div class="card">
@@ -63,6 +63,9 @@ const data = await respons.json();
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+  }
+  #in_stock {
+    scroll-margin: 70px;
   }
   @media (max-width: 800px) {
     h2 {

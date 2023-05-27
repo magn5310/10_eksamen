@@ -9,24 +9,25 @@
       <a href="/shop">
         <h3>Shop</h3>
       </a>
-      <a href="/shop"> <p>Signature rings</p></a>
 
-      <a href="/shop"> <p>Custom rings</p></a>
+      <a href="/shop#in_stock"><p>In stock</p></a>
+      <a href="/shop#gallery"> <p>Custom rings</p></a>
+      <a href="/shop#howto"> <p>How to order</p></a>
 
-      <a href="/shop"><p>In stock</p></a>
-
-      <a href="/shop"><p>Order custom</p></a>
+      <a href="/shop#order"><p>Order custom</p></a>
     </div>
     <div class="about">
       <a href="/about">
         <h3>About</h3>
       </a>
 
-      <a href="/about"> <p>Cehofski</p></a>
+      <a href="/about#first"> <p>Cehofski</p></a>
 
-      <a href="/about"><p>Louise</p></a>
+      <a href="/about#second"><p>Louise</p></a>
 
-      <a href="/about"><p>The process</p></a>
+      <a href="/about#third"><p>Rings</p></a>
+
+      <a href="/about#fourth"><p>The process</p></a>
     </div>
     <div class="find">
       <h3>Find us</h3>
@@ -59,7 +60,7 @@
   p::after {
     content: "";
     position: absolute;
-    background-color: white;
+    background-color: var(--secondarycolor);
     height: 1px;
     width: 0;
     left: 0;
@@ -81,11 +82,11 @@
   a > *,
   h3,
   p {
-    color: white;
+    color: var(--secondarycolor);
     padding-block: 0.3rem;
   }
   .sektion p {
-    color: white;
+    color: var(--secondarycolor);
   }
   h3 {
     font-weight: 100;

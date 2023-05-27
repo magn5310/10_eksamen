@@ -8,7 +8,8 @@ import Shopgal from "../components/Shopgal.astro";
 import "../styles/style.css";
 
 const url = "https://fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/stock";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4";
 
 const respons = await fetch(url, {
   method: "GET",
@@ -34,7 +35,7 @@ const data = await respons.json();
   </head>
   <Header />
   <main>
-    <section>
+    <section id="in_stock">
       <h1>Handcrafted Artwear</h1>
       <h3>by cehofski</h3>
     </section>
@@ -47,7 +48,7 @@ const data = await respons.json();
     <Prodshelf text="the rings we have in stock" />
     <Shopgal />
 
-    <div class="order">
+    <div class="order" id="order">
       <Order />
     </div>
     <Form />
@@ -70,6 +71,13 @@ const data = await respons.json();
     }
     section {
       margin-bottom: 3rem;
+    }
+
+    #order {
+      scroll-margin: 70px;
+    }
+    #in_stock {
+      scroll-margin: 70px;
     }
 
     @media (max-width: 800px) {

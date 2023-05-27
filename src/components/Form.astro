@@ -3,7 +3,7 @@ import Ordered from "../pages/ordered.astro";
 import Knap from "./Knap.astro";
 ---
 
-<section class="kontakt">
+<section class="kontakt" id="form">
   <div>
     <h2>Want a custom ring?</h2>
     <p>
@@ -123,6 +123,10 @@ import Knap from "./Knap.astro";
       input {
         border: 1px solid var(--primarycolor);
         background-color: var(--secondarycolor);
+      }
+
+      #form {
+        scroll-margin: 70px;
       }
 
       @media (max-width: 768px) {
