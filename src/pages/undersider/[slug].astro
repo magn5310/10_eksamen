@@ -47,6 +47,21 @@ const { item } = Astro.props;
 
     <main>
       <div class="header">
+      
+        <p class="breadcrums">
+          <span>
+           <a href="/shop">
+            Shop
+           </a>
+            
+          </span>
+          -
+            {/* Betinget rendering baseret på værdien af second_name */}
+            {item.second_name ? <span>{item.name + " " + item.second_name}</span> : <span>{item.name}</span>}
+
+        </p>
+
+
         <img src={"../../img/" + item.img1 + ".webp"} alt={item.name + " " + item.type} />
         <h1>
           <span>
@@ -370,6 +385,7 @@ const { item } = Astro.props;
     justify-items: center;
     align-items: center;
     background-color: black;
+    position: relative;
   }
   .header img {
     position: relative;
@@ -378,6 +394,44 @@ const { item } = Astro.props;
     width: 100%;
     opacity: 80%;
   }
+  .header .breadcrums{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    color: var(--secondarycolor);
+    font-size: 0.8rem;
+  }
+
+  .header a{
+    text-decoration: none;
+    color: var(--secondarycolor);
+  }
+
+
+
+
+  .header .breadcrums span::after {
+    content: "";
+    position: absolute;
+    background-color: var(--secondarycolor);
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -0.1rem;
+    margin: auto;
+    transition: 0.3s;
+cursor: pointer;
+    
+  }
+.header .breadcrums span:nth-child(1):hover:after {
+    width: 100%;
+  }
+.header .breadcrums span:nth-child(2)::after {
+    width: 100%;
+    cursor: none;
+  }
+
 
   h1 {
     position: relative;
