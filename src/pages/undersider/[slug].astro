@@ -191,8 +191,9 @@ const { item } = Astro.props;
             <div class="top">
               <h4>{item.type}</h4>
             </div>
+            {/* Betinget rendering baseret på værdien af second_name */}
+            {item.second_name ? <h2 >{item.name + " " + item.second_name}</h3> : <h2 >{item.name}</h3>}
 
-            <h2>{item.name + " " + item.second_name}</h2>
             <h3>{item.price + " DKK"}</h3>
 
             <div class="size">
@@ -226,7 +227,7 @@ const { item } = Astro.props;
             }
           </div>
           <div class="shop">
-            <Knap color="blue" text="shop" />
+            <Knap color="blue" text="shop" link="/ordered" />
             <a href="#form">
               <p class="custom">Or get your own custom piece</p>
             </a>
@@ -292,7 +293,7 @@ const { item } = Astro.props;
        
       </div>
       <div class="shop">
-        <Knap color="blue" text="shop" type="phone" />
+        <Knap color="blue" text="shop" link="/ordered" type="phone" />
 
       </div>
       </section>
@@ -560,8 +561,10 @@ margin-top: 1rem;
     .shop{
 position: sticky;
 bottom: 1rem;
-width: 100%;
+
 display: flex;
+margin-left: 1rem;
+margin-right: 1rem;
     }
 
 #form{
