@@ -77,9 +77,10 @@ import Knap from "./Knap.astro";
         font-size: 1rem;
         background-color: var(--secondarycolor);
         border: 1px solid var(--primarycolor);
-        padding: 0.5rem 1rem 0.5rem 1rem;
+        padding-left: 0.5rem;
         color: var(--black);
         font-family: "Montserrat", sans-serif;
+
       }
 
       input::placeholder {
@@ -96,7 +97,7 @@ import Knap from "./Knap.astro";
         margin-top: 1rem;
         margin-bottom: 1rem;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 0.5fr;
         grid-template-rows: 1fr 1fr 5fr;
         gap: 0.5rem;
         overflow: hidden;
@@ -185,6 +186,27 @@ import Knap from "./Knap.astro";
       }
     </style>
 
-    <script></script>
-  </div>
-</section>
+
+<script>
+  const url = "https://vvjmazqfuruokrbpmhso.supabase.co/rest/v1/testimonials";
+const key =
+"https://app.supabase.com/project/fttrpxvnwfswdwvtcifh/editor/28589#:~:text=curl%20%27-,https%3A//fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/orders,-%3Fselect%3Did%27";
+
+const form = document.querySelector("form");
+form.addEventListener("submit", sendForm);
+
+
+console.log(formData);
+fetch(url, {
+  method: "POST",
+  headers: {
+    apikey: key,
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ name, headline, text }),
+});
+
+</script>
+
+
