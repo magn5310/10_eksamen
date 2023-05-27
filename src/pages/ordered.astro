@@ -1,0 +1,58 @@
+---
+import Footer from "../components/Footer.astro";
+
+import Header from "../components/Header.astro";
+import Knap from "../components/Knap.astro";
+
+import "../styles/style.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>Astro</title>
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <h1>Thanks for your order</h1>
+      <p>Please note, that your order is confirmed once you get a confirmation mail. <br /> Response times may vary, but we will reach out to you promptly.</p>
+
+      <div class="img_container">
+        <img src="../../public/img/cehofski_silver.png" alt="" />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  img {
+    height: 300px;
+  }
+
+  .img_container {
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import Ordered from "../pages/ordered.astro";
 import Knap from "./Knap.astro";
 ---
 
@@ -29,7 +30,7 @@ import Knap from "./Knap.astro";
         <input class="all" type="text" name="overskrift" placeholder="Headline*" />
         <input class="all text" type="text" name="text" placeholder="Text*" />
 
-        <button type="submit"> <Knap type="phone" color="blue" text="Send" /></button>
+        <button type="submit"> <Knap type="phone" color="blue" text="Send" link="/ordered" /></button>
       </form>
     </div>
 
@@ -80,7 +81,6 @@ import Knap from "./Knap.astro";
         padding-left: 0.5rem;
         color: var(--black);
         font-family: "Montserrat", sans-serif;
-
       }
 
       input::placeholder {
@@ -186,27 +186,23 @@ import Knap from "./Knap.astro";
       }
     </style>
 
+    <script>
+      const url = "https://vvjmazqfuruokrbpmhso.supabase.co/rest/v1/testimonials";
+      const key = "https://app.supabase.com/project/fttrpxvnwfswdwvtcifh/editor/28589#:~:text=curl%20%27-,https%3A//fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/orders,-%3Fselect%3Did%27";
 
-<script>
-  const url = "https://vvjmazqfuruokrbpmhso.supabase.co/rest/v1/testimonials";
-const key =
-"https://app.supabase.com/project/fttrpxvnwfswdwvtcifh/editor/28589#:~:text=curl%20%27-,https%3A//fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/orders,-%3Fselect%3Did%27";
+      const form = document.querySelector("form");
+      form.addEventListener("submit", sendForm);
 
-const form = document.querySelector("form");
-form.addEventListener("submit", sendForm);
-
-
-console.log(formData);
-fetch(url, {
-  method: "POST",
-  headers: {
-    apikey: key,
-    Accept: "application/json",
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ name, headline, text }),
-});
-
-</script>
-
-
+      console.log(formData);
+      fetch(url, {
+        method: "POST",
+        headers: {
+          apikey: key,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, headline, text }),
+      });
+    </script>
+  </div>
+</section>
