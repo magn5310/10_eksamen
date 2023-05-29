@@ -8,8 +8,7 @@ import Shopgal from "../components/Shopgal.astro";
 import "../styles/style.css";
 
 const url = "https://fttrpxvnwfswdwvtcifh.supabase.co/rest/v1/stock";
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dHJweHZud2Zzd2R3dnRjaWZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTgwMzcsImV4cCI6MTk5OTk3NDAzN30.jiQY1R9_4xH6PJgdeCvhKQKRA6bfCLB2ciJOBVzotc4";
 
 const respons = await fetch(url, {
   method: "GET",
@@ -31,7 +30,7 @@ const data = await respons.json();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
-    <title>About</title>
+    <title>Shop</title>
   </head>
   <Header />
   <main>
