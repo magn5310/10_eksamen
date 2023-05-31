@@ -26,26 +26,41 @@
   }
   section {
     margin-inline: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   section > * {
-    margin-block: 5rem;
+    margin-block: 1rem;
   }
   .info div p {
     max-width: 30ch;
+  }
+
+  .info div {
+    border: 1px solid var(--black);
+    width: 100%;
+    padding: 2rem;
+    border-right: none;
+  }
+  .info div:nth-child(3) {
+    border-right: 1px solid var(--black);
+  }
+
+  .info div p {
+    color: var(--black);
   }
 
   #howto {
     scroll-margin: 70px;
   }
   h3 {
-    background-color: var(--primarycolor);
-    color: white;
+    color: var(--black);
     font-weight: 100;
     max-width: 5rem;
     padding-left: 0.3rem;
   }
   .overskrift p {
-    color: var(--black);
+    color: var(--se);
   }
   a {
     color: var(--primarycolor);
