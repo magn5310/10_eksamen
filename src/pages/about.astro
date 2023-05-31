@@ -208,7 +208,8 @@ import Footer from "../components/Footer.astro";
   }
 
   .img_container img {
-    width: 100%;
+    object-fit: cover;
+    align-self: stretch;
   }
   .blue {
     background-color: var(--primarycolor);
@@ -240,7 +241,7 @@ import Footer from "../components/Footer.astro";
   .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     height: 100%;
   }
@@ -248,15 +249,18 @@ import Footer from "../components/Footer.astro";
     height: 100%;
     width: 100%;
   }
+  .grid_1_1_1_1 .img_container img {
+    height: 100%;
+  }
 
   .grid1 {
     grid-area: 1/2;
-    grid-row: 1/4;
+    grid-row: 1/6;
   }
 
   .grid2 {
     grid-area: 2;
-    grid-row: 3/6;
+    grid-row: 3/7;
     overflow: hidden;
     height: 100%;
   }
@@ -306,11 +310,14 @@ import Footer from "../components/Footer.astro";
     grid-row: 1;
   }
 
+  .crafted .img_container {
+    max-width: 500px;
+    display: flex;
+  }
   .crafted .img_container img {
-    box-sizing: border-box;
-    min-height: 100%;
+    object-fit: cover;
     min-width: 100%;
-    margin: auto;
+    align-self: stretch;
   }
 
   .crafted p {
