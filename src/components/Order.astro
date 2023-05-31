@@ -72,8 +72,14 @@
     .info {
       display: block;
     }
-    .info > * {
-      margin-bottom: 2rem;
+    .info div {
+      border: 1px solid var(--black);
+      width: 100%;
+      padding: 2rem;
+      border-bottom: none;
+    }
+    .info div:nth-child(3) {
+      border-bottom: 1px solid var(--black);
     }
     section > * {
       margin-block: 2rem;

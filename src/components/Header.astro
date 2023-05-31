@@ -88,7 +88,7 @@
     font-family: "Perandory";
     font-size: 2rem;
     font-weight: 100;
-    color: var(--black);
+    color: var(--primarycolor);
     height: 100%;
     margin-bottom: 0.7rem;
   }
@@ -110,12 +110,16 @@
       display: block;
       margin-right: 1rem;
       align-self: center;
-      padding-top: 1rem;
+      padding-top: 0rem;
       transition: 0.3s ease;
     }
     nav.active {
       background-color: var(--primarycolor);
       transition: 0.3s ease-in-out;
+    }
+
+    nav.active .logo {
+      color: var(--secondarycolor);
     }
     .burger.active .bar:nth-child(2) {
       opacity: 0;
